@@ -1,4 +1,4 @@
-import React, { useState, createContext, useContext } from 'react';
+import React, { useState, createContext } from 'react';
 
 interface TabsContextType {
   value: string;
@@ -42,18 +42,16 @@ export const Tabs: React.FC<TabsProps> = ({
 };
 
 interface TabsListProps {
-  value: string;
   onValueChange: (value: string) => void;
   children: React.ReactNode;
 }
 
-export const TabsList: React.FC<TabsListProps> = ({ value, onValueChange, children }) => {
+export const TabsList: React.FC<TabsListProps> = ({ onValueChange, children }) => {
   return (
     <div className="flex space-x-2 overflow-x-auto">
       {React.Children.map(children, (child) => {
         if (React.isValidElement(child)) {
           return React.cloneElement(child as React.ReactElement<any>, {
-            isActive: child.props.value === value,
             onSelect: () => onValueChange(child.props.value),
           });
         }
@@ -64,14 +62,12 @@ export const TabsList: React.FC<TabsListProps> = ({ value, onValueChange, childr
 };
 
 interface TabsTriggerProps {
-  value: string;
   isActive?: boolean;
   onSelect?: () => void;
   children: React.ReactNode;
 }
 
 export const TabsTrigger: React.FC<TabsTriggerProps> = ({ 
-  value, 
   isActive, 
   onSelect, 
   children 
@@ -91,13 +87,11 @@ export const TabsTrigger: React.FC<TabsTriggerProps> = ({
 };
 
 interface TabsContentProps {
-  value: string;
   active?: boolean;
   children: React.ReactNode;
 }
 
 export const TabsContent: React.FC<TabsContentProps> = ({ 
-  value, 
   active, 
   children 
 }) => {
