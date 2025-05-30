@@ -1,5 +1,5 @@
 
-📦 AgreeLoop – Agri-Waste Exchange Platform
+# AgreeLoop – Agri-Waste Exchange Platform #
 
 AgreeLoop is a web-based Agri-Waste Exchange platform aimed at promoting sustainable agriculture by enabling farmers, waste generators, and businesses to connect. It facilitates the exchange, valorization, and tracking of agricultural waste for recycling or repurposing.
 
@@ -26,11 +26,17 @@ Copy
 Edit
 AgreeLoop/
 ├── index.html               # Entry HTML
+
 ├── package.json             # Project config and dependencies
+
 ├── tailwind.config.js       # Tailwind CSS config
+
 ├── postcss.config.js        # PostCSS config
+
 ├── tsconfig.json            # TypeScript config
+
 ├── public/                  # Static files
+
 └── src/                     # React source code
     ├── components/          # Reusable UI components
     ├── pages/               # React Router pages
@@ -49,14 +55,14 @@ Steps
 bash
 Copy
 Edit
-# Clone the repository
+Clone the repository
 git clone https://github.com/your-username/AgreeLoop.git
 cd AgreeLoop
 
-# Install dependencies
+Install dependencies
 npm install
 
-# Start development server
+Start development server
 npm run dev
 🧪 Available Scripts
 npm run dev – Start dev server (Vite)
